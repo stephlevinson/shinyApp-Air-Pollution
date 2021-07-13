@@ -1,4 +1,5 @@
 
+
 #UI ---------------------------------------------------------------------------
 shinyUI(dashboardPage(
     
@@ -29,21 +30,18 @@ shinyUI(dashboardPage(
         tabItem(tabName="intro",
                 h1(strong("Analysis of Global Air Pollution and Related Fatalities"),align="center"),
                 br(),
-                br(),
                 fluidRow(
                     column(width=12,
                            align="center",
-                           img(src="https://www.studyfinds.org/wp-content/uploads/2019/08/AdobeStock_264610442.jpeg",height=500,width=600)
+                           img(src="https://www.studyfinds.org/wp-content/uploads/2019/08/AdobeStock_264610442.jpeg",height=400,width=500)
                     )
                 ),
                 br(),
-                br(),
                 fluidRow(
-                    column(width=1),
-                    column(width=11,
+                    column(width=12,
                         box(status="success",
                             solidHeader = TRUE,
-                            width=11,
+                            width=12,
                             h4(p(strong("As the world faces a respiratory pandemic, it has become more apparent how important 
                             it is to breathe clean air. The WHO estimates that about 7 million people worldwide die every year 
                             from air pollution (1). In addition, the WHO data reflects that 9 out of 10 people breathe air that is 
@@ -56,14 +54,10 @@ shinyUI(dashboardPage(
                             biggest concern in each location. This could help guide organizations like the WHO to properly allocate
                             resources and come up with strategies on how to mitigate avoidable exposure to pollution."),
                             br(),
-                            p("If I had more time")
-                            
-                            ),
-                            br(),
                             br(),
                             p("Air pollution can be categorized by 'Ambient Air Pollution' (outdoors) and 'Household Air Pollution' (indoors). 
                             We will be looking at two types of ambient air pollution, 'Particulate Matter 2.5 (ug/m3)' and 'Amient Ozone Pollution (ppb)',
-                            and indoor air pollution caused from using solid fuels, 'Household Air Pollution (HAP)'.")
+                            and indoor air pollution caused from using solid fuels, 'Household Air Pollution (HAP)'."))
                         )
                     )
                 ),
@@ -186,7 +180,7 @@ shinyUI(dashboardPage(
                 fluidRow(
                     box(width=12,
                         background="green",
-                        h4("This taab is used to observe the changing dynamics of air pollution over 
+                        h5("This tab is used to observe the changing dynamics of air pollution over 
                         time for each country. This can be used as a way to measure potential changes due to 
                         new policy changes or programs put in place to mitigate exposure and ultimately fatalities On the 
                         other end, this tool can be used to alert relevant groups of locations where exposure and 
@@ -194,7 +188,7 @@ shinyUI(dashboardPage(
                 ),                
                 fluidRow(
                     tabBox(width=12, 
-                           tabPanel("Exposure",htmlOutput("eMap"), width=1200, height=275),
+                           tabPanel("Exposure",htmlOutput("eMap"), width=1200, height=250),
                            tabPanel("Health Impact", htmlOutput("dMap"))
                     )  
                 )
@@ -222,7 +216,7 @@ shinyUI(dashboardPage(
         
                 fluidRow(
                     box(width=12,background = "green",
-                        h4("The exhibits below reflect the annual trends of exposure and death rates 
+                        h5("The exhibits below reflect the annual trends of exposure and death rates 
                                   by pollutant and region. From this tool we can see that generally higher levels 
                                   of exposure to pollutants are found in Asia and Africa, and found in countries
                                   that are middle-low on the socio-demographic index. It is also evident that Africa
@@ -266,3 +260,4 @@ shinyUI(dashboardPage(
     )
 )
 )
+
