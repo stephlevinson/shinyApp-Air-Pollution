@@ -72,7 +72,7 @@ shinyUI(dashboardPage(
 # (5) TOP COUNTRIES TAB -----------------------------------------------
         
         tabItem(tabName = "top",
-                h2("Top 20 Most Polluted Countries Over"), br(),
+                h2("Top 20 Most Polluted Countries"), br(),
                 
         # SELECT OPTIONS -----------------------------
                 fluidRow(
@@ -218,8 +218,8 @@ shinyUI(dashboardPage(
                     box(width=12,background = "green",
                         h5("The exhibits below reflect the annual trends of exposure and death rates 
                                   by pollutant and region. From this tool we can see that generally higher levels 
-                                  of exposure to pollutants are found in Asia and Africa, and found in countries
-                                  that are middle-low on the socio-demographic index. It is also evident that Africa
+                                  of exposure to pollutants are found in Asia and Africa, and usually found in countries
+                                  that are middle-low and low on the socio-demographic index. It is also evident that Africa
                                   has the highest exposure to household air pollution which comes from cooking with
                                   solid fuels. By focusing efforts to educate on better cooking methods, this could
                                   help reduce exposures and ultimately avoid pre-mature death."))
