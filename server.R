@@ -1,4 +1,5 @@
 
+
 # SERVER------------------------------------------
 shinyServer(function(input, output){
 
@@ -127,7 +128,7 @@ shinyServer(function(input, output){
             if (input$pollutant2=="PM") {
                 "Particulate Matter 2.5 ug/m3"
             } else if (input$pollutant2=="HAP"){
-                "Household Air Pollution from solid feuls '(proportion of pop')"
+                "Household Air Pollution from solid fuels"
             } else if (input$pollutant2=="Oz") {
                 "Ambient Ozone Pollution ('ppb')"
             } else {
@@ -265,3 +266,4 @@ shinyServer(function(input, output){
     }) 
     
 })
+
