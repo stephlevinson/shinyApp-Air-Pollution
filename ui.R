@@ -42,9 +42,9 @@ shinyUI(dashboardPage(
                             solidHeader = TRUE,
                             width=12,
                             h4(p(strong("As the world faces a respiratory pandemic, it has become more apparent how important 
-                            it is to breathe clean air. The WHO estimates that about 7 million people worldwide die every year 
-                            from air pollution (1). In addition, the WHO data reflects that 9 out of 10 people breathe air that is 
-                            above the WHO guidelines (1).")),
+                            it is to breathe clean air. Based on data from the World Health Organization (WHO), 9 out of 10 
+                            people breathe air that is above WHO guidelines (1). Additionally the WHO estimates that about 7 
+                            million people worldwide die every year from air pollution (1).")),
                             br(),
                             p("While air pollution also poses a major threat to the climate and sustainability 
                             of our planet, this analysis will focus on the health impacts associated with exposure to various 
@@ -54,9 +54,10 @@ shinyUI(dashboardPage(
                             resources and come up with strategies on how to mitigate avoidable exposure to pollution."),
                             br(),
                             br(),
-                            p("Air pollution can be categorized by 'Ambient Air Pollution' (outdoors) and 'Household Air Pollution' (indoors). 
-                            We will be looking at two types of ambient air pollution, 'Particulate Matter 2.5 (ug/m3)' and 'Amient Ozone Pollution (ppb)',
-                            and indoor air pollution caused from using solid fuels, 'Household Air Pollution (HAP)'."))
+                            p("This app will look at three types of air pollution: 'Ambient Air Pollution' (outdoors) and 'Household 
+                            Air Pollution' (indoors). We will be looking at two types of ambient air pollution, 'Particulate Matter 2.5 
+                            (ug/m3)' and 'Amient Ozone Pollution (ppb)', and indoor air pollution caused from using solid fuels, 
+                            'Household Air Pollution (HAP)'."))
                         )
                     )
                 ),
