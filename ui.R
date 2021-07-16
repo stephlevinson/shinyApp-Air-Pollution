@@ -110,6 +110,13 @@ shinyUI(dashboardPage(
                     )
                 ),
                 fluidRow(
+                    box(width=12,
+                        background="green",
+                        h5("This tab is used to observe the top 20 countries over time and by pollutant. The size of the 
+                        squares represents the amount of pollutant or the death rates, and the coloring of each country
+                        represents the relative difference between the most polluted country."))
+                ),  
+                fluidRow(
                     column(width=12,
                            align="center",
                            htmlOutput("tree"),
