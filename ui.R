@@ -163,8 +163,8 @@ shinyUI(dashboardPage(
                     box(width=12,
                         background="green",
                         h5("This tab is used to observe countries geographically to observe any potential patterns.
-                            It makes it easier to spot out any correllation between biomes and pollution levels. Please note
-                           that this map doesnt reflect the data from the United States, Russia and some other countries. However,
+                            It makes it easier to spot out any correlation between biomes and pollution levels. Please note
+                           that this map doesn't reflect the data from the United States, Russia and some other countries. However,
                            the data for these countries is in the entire dataset."))
                 ),                
                 fluidRow(
