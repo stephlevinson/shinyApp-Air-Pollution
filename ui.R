@@ -1,5 +1,4 @@
 
-
 #UI ---------------------------------------------------------------------------
 shinyUI(dashboardPage(
     
@@ -116,31 +115,6 @@ shinyUI(dashboardPage(
                            htmlOutput("tree"),
                            br())
                 ),
-                fluidRow(
-                    box(width=3, 
-                        title="Highest Exposure",
-                        status="success",
-                        height=275, 
-                        htmlOutput("eTop5")
-                    ),
-                    box(width=3, 
-                        title="Lowest Exposure",
-                        status="success",
-                        height=275, 
-                        htmlOutput("eBottom5")
-                    ),
-                    box(width=3, title="Highest Death Rate",
-                        status="success",
-                        height=275, 
-                        htmlOutput("dTop5")
-                    ),
-                    box(width=3, 
-                        title="Lowest Death Rate",
-                        status="success",
-                        height=275, 
-                        htmlOutput("dBottom5")
-                    )
-                )
         ),      
         
 # (6) MAP TAB -----------------------------------------------------
@@ -180,11 +154,10 @@ shinyUI(dashboardPage(
                 fluidRow(
                     box(width=12,
                         background="green",
-                        h5("This tab is used to observe the changing dynamics of air pollution over 
-                        time for each country. This can be used as a way to measure potential changes due to 
-                        new policy changes or programs put in place to mitigate exposure and ultimately fatalities On the 
-                        other end, this tool can be used to alert relevant groups of locations where exposure and 
-                        deaths are increasing at high rates so that they can be prioritized."))
+                        h5("This tab is used to observe countries geographically to observe any potential patterns.
+                            It makes it easier to spot out any correllation between biomes and pollution levels. Please note
+                           that this map doesnt reflect the data from the United States, Russia and some other countries. However,
+                           the data for these countries is in the entire dataset."))
                 ),                
                 fluidRow(
                     tabBox(width=12, 
@@ -217,12 +190,10 @@ shinyUI(dashboardPage(
                 fluidRow(
                     box(width=12,background = "green",
                         h5("The exhibits below reflect the annual trends of exposure and death rates 
-                                  by pollutant and region. From this tool we can see that generally higher levels 
-                                  of exposure to pollutants are found in Asia and Africa, and usually found in countries
-                                  that are middle-low and low on the socio-demographic index. It is also evident that Africa
-                                  has the highest exposure to household air pollution which comes from cooking with
-                                  solid fuels. By focusing efforts to educate on better cooking methods, this could
-                                  help reduce exposures and ultimately avoid pre-mature death."))
+                                by pollutant and region. From this tool we can easily observe changes throughout time
+                                and better observe which pollutants are seeing a large increase than others. The second
+                                tab breaks out the population based on the socio-demographic index to observe which type
+                                of demographics are impacted the most or least."))
                 ),
                 
         # EXPOSURE GRAPHS OUTPUT ---------------------------
@@ -260,4 +231,3 @@ shinyUI(dashboardPage(
     )
 )
 )
-
