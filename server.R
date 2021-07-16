@@ -1,10 +1,9 @@
 
-
 # SERVER------------------------------------------
 shinyServer(function(input, output){
 
 # (1) TREE CHART TAB ----------------------------
-    
+
     treegroup=reactive({
                 pollution %>% filter(Year==input$year1,Type=="country") %>% 
                         group_by(Country,Year,Parent) %>% 
@@ -21,12 +20,14 @@ shinyServer(function(input, output){
                         sizevar = "total",
                         colorvar = "total",
                         options = list(headerColor="FFFFFF",
-                                       maxColor="08a142",
-                                       minColor="#ffffff")
+                                    headerColor="FFFFFF",
+                                    maxColor="08a142",
+                                    minColor="#ffffff",
+                                    showScale=TRUE)
             )
     })
-    
 
+    
 # (2) MAP TAB ------------------------------------
     
     gCountry = reactive({
@@ -200,4 +201,3 @@ shinyServer(function(input, output){
     }) 
     
 })
-
