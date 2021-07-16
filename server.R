@@ -26,73 +26,7 @@ shinyServer(function(input, output){
             )
     })
     
-    # PIE CHARTS
-    dTop=reactive({
-             pollution %>% filter(Year==input$year1,Type=="country",Region!="ALL") %>%
-                        group_by(Country,Year) %>%
-                        summarise(total=sum(get(paste0("Death", input$pollutant1)))) %>%
-                        select(Country,total) %>%
-                        arrange(desc(total)) %>%
-                        head(5)
-    })
-    output$dTop5 = renderGvis({
-                gvisPieChart(data = dTop(),
-                            labelvar = "Country",
-                            numvar = "total",
-                            options = list(pieHole=0.4,
-                                            legend="none")
-                )
-    })
-    dBottom=reactive({
-        pollution %>% filter(Year==input$year1,Type=="country",Region!="ALL") %>%
-            group_by(Country,Year) %>%
-            summarise(total=sum(get(paste0("Death", input$pollutant1)))) %>%
-            select(Country,total) %>%
-            arrange(total) %>%
-            head(5)
-    })
-    output$dBottom5 = renderGvis({
-        gvisPieChart(data = dBottom(),
-                     labelvar = "Country",
-                     numvar = "total",
-                     options = list(pieHole=0.4,
-                                    legend="none")
-        )
-    })
-    eTop=reactive({
-        pollution %>% filter(Year==input$year1,Type=="country",Region!="ALL") %>%
-            group_by(Country,Year) %>%
-            summarise(total=sum(get(paste0("Exposure", input$pollutant1)))) %>%
-            select(Country,total) %>%
-            arrange(desc(total)) %>%
-            head(5)
-    })
-    output$eTop5 = renderGvis({
-        gvisPieChart(data = eTop(),
-                     labelvar = "Country",
-                     numvar = "total",
-                     options = list(pieHole=0.4,
-                                    legend="none",
-                                    height="200px")
-        )
-    })
-    eBottom=reactive({
-        pollution %>% filter(Year==input$year1,Type=="country",Region!="ALL") %>%
-            group_by(Country,Year) %>%
-            summarise(total=sum(get(paste0("Exposure", input$pollutant1)))) %>%
-            select(Country,total) %>%
-            arrange(total) %>%
-            head(5)
-    })
-    output$eBottom5 = renderGvis({
-        gvisPieChart(data = eBottom(),
-                     labelvar = "Country",
-                     numvar = "total",
-                     options = list(pieHole=0.4,
-                                    legend="none")
-        )
-    })
-    
+
 # (2) MAP TAB ------------------------------------
     
     gCountry = reactive({
